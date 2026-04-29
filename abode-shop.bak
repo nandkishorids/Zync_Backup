@@ -1,0 +1,3570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2026-04-29T10:02:19.319227+01:00</LastRan>
+  <ShouldResume>true</ShouldResume>
+  <Resume>false</Resume>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Connect.Sage200V13.ExportGoodsDespatchedNotesV2, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ExportGoodsDespatchedNotesV2>
+        <LastResult>Success</LastResult>
+        <Name>&gt; DISPATCH NOTES: Sage 200 - All Sites - Export to file</Name>
+        <Enabled>true</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Success</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>true</Resume>
+            <LastRan>2026-04-28T11:01:03.3673752+01:00</LastRan>
+            <Id>63e800a5-1dde-419c-83ee-299675bfc672</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>zynk@abode.eu</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>sales@abode.eu,sdas@idslogic.co.uk</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>AWilkinson@abodedesigns.co.uk</string>
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Zynk Sage 200 Dispatch Export Failed</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Hi There,
+
+The Dispatch Note Export from Sage 200 failed for Abode Shop, please check that the maximum number of users for Sage 200 has 
+been reached.
+
+If you still receive this error after rectifying the above, please send an email to paul@instantcart.com or call 0113 256 0200 for further assistance.
+
+Many Thanks
+
+Zynk
+P.S: I Reside on the Sage 200 server under the Windows user "Sync", I will retry to run the workflow 3 times every 10 minutes after this message has been issued.</string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>true</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>65711ee8-265b-4d8c-bb79-ef4eb9bb9e4d</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-04-29T10:01:44.1856088+01:00</LastRan>
+        <Id>d4b22f81-48ef-4ad6-929a-26f99f7f2b86</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>b61778d6-03b9-4b52-bf15-e748886ae3ec</Id>
+        </ConnectionPointer>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_export_goods_despatch_notes.xml</string>
+          </Value>
+        </OutputFile>
+        <SdkQuerySettings>
+          <Columns />
+          <Joins />
+          <Where />
+        </SdkQuerySettings>
+        <ExportSettings>
+          <OpLock>163757309</OpLock>
+          <DateTimeCreated>2026-04-29T08:59:57.893</DateTimeCreated>
+          <ExportType>New</ExportType>
+          <PageSize>100</PageSize>
+          <Timeout>30</Timeout>
+        </ExportSettings>
+        <CleanseCharacters />
+        <UseCaching>true</UseCaching>
+        <QuerySettings>
+          <Columns />
+          <Joins />
+          <Where />
+        </QuerySettings>
+      </ExportGoodsDespatchedNotesV2>
+    </Task>
+    <Task type="Zynk.Internet.Ftp.FtpUpload, Zynk.Internet.Ftp, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <FtpUpload>
+        <LastResult>Success</LastResult>
+        <Name>&gt; All sites - Upload Despatch Notes file to FTP</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-04-29T10:01:44.6500767+01:00</LastRan>
+        <Id>aeed85c1-909d-4f67-a076-2e14d0580887</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionGroupName />
+        <Directory>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>/</string>
+          </Value>
+        </Directory>
+        <FtpConnectionPointer>
+          <Id>be56d229-11d8-4156-b0fd-32e19a964b0e</Id>
+        </FtpConnectionPointer>
+        <Timeout xsi:nil="true" />
+        <Server>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>ftp://</string>
+          </Value>
+        </Server>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <UsePassive>true</UsePassive>
+        <UseSSL>false</UseSSL>
+        <UseBinary>true</UseBinary>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_export_goods_despatch_notes.xml</string>
+          </Value>
+        </InputFile>
+        <OutputFile>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>despatchnotes.xml</string>
+          </Value>
+        </OutputFile>
+        <OverwriteFile>true</OverwriteFile>
+        <Retries>2</Retries>
+        <TemporaryUploadSetting>
+          <Option>NotEnabled</Option>
+          <TemporaryFileExtension>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string>tmp</string>
+            </Value>
+          </TemporaryFileExtension>
+          <TemporaryDirectory>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string>Temp</string>
+            </Value>
+          </TemporaryDirectory>
+        </TemporaryUploadSetting>
+        <PrependTimestamp>false</PrependTimestamp>
+        <TimestampFormat>yyyyMMddHHmmssffff</TimestampFormat>
+      </FtpUpload>
+    </Task>
+    <Task type="Zynk.Internet.Http.HttpTask, Zynk.Internet.Http, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <HttpTask>
+        <LastResult>Success</LastResult>
+        <Name>&gt; Abode Shop - Import Despatch Notes to IC</Name>
+        <Enabled>false</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Unknown</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>true</Resume>
+            <LastRan>2024-07-08T18:03:30.8096489+01:00</LastRan>
+            <Id>8b4b1605-69f6-4514-b58a-b5db79106a7e</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode.  It tried 3 times.  Please check the connection is live to the Sage Instantcart App and try again.  Please call 01132560200 or 07793966386 to speak to an Instantcart support agent. </string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>false</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-04-30T10:01:16.5467905+01:00</LastRan>
+        <Id>463f5042-2e65-4ec6-a744-5d9cd92ca9bd</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <Url>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=dispatchimport&amp;s=abodeshop.instantcart.com&amp;t=c85206dce8aad6852d9b5dab0a9cad1d&amp;time=115172111932</string>
+          </Value>
+        </Url>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <Timeout>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>120000</string>
+          </Value>
+        </Timeout>
+        <UserAgent>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Zynk Software Ltd/Zynk</string>
+          </Value>
+        </UserAgent>
+        <EncodingType>UTF8</EncodingType>
+        <ProtocolVersion>v1_1</ProtocolVersion>
+        <KeepAlive xsi:nil="true" />
+        <HeaderValues />
+        <FormValues />
+        <ContentsField>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ContentsField>
+        <Input>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Input>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </OutputFile>
+        <Method>GET</Method>
+        <Retries>3</Retries>
+        <CompressData>false</CompressData>
+      </HttpTask>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.ImportSalesOrders, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ImportSalesOrders>
+        <LastResult>Success</LastResult>
+        <Name>&lt; Abode Shop - Import Sales Orders to Sage</Name>
+        <Enabled>false</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Unknown</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>true</Resume>
+            <LastRan>2024-11-03T15:01:04.9532198+00:00</LastRan>
+            <Id>27ad76c9-838f-4569-a467-6891d1ef4066</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>zynk@abode.eu</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>sales@abode.eu</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>AWilkinson@abodedesigns.co.uk</string>
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Abode Shop Sage 200 Order Import Failed</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Hi There,
+
+The Sales import from Instantcart to Sage 200 failed for Abode Shop, please check that the maximum number of users for Sage 200 has 
+been reached.
+
+If you still receive this error after rectifying the above, please send an email to paul@instantcart.com or call 0113 256 0200 for further assistance.
+
+Many Thanks
+
+Zynk
+P.S: I Reside on the Sage 200 server, I will retry to run the workflow 3 times every 10 minutes after this message has been issued.</string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>true</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-04-30T10:01:18.5980257+01:00</LastRan>
+        <Id>4ac3a133-9a68-4d4c-8996-bc49c01804f3</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>b61778d6-03b9-4b52-bf15-e748886ae3ec</Id>
+        </ConnectionPointer>
+        <InputFile>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>True</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=sales&amp;s=abodeshop.instantcart.com&amp;t=c85206dce8aad6852d9b5dab0a9cad1d&amp;time=115172111932</string>
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>abode_shop_sage_200_import_sales_orders_success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>abdoe_shop_sage_200_import_sales_orders_fail.xml</string>
+          </Value>
+        </FailFile>
+        <MatchFields />
+        <AutoGenerateAccountReferences>
+          <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+          <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+          <AlphabeticLength>4</AlphabeticLength>
+          <NumericLength>4</NumericLength>
+          <RegularExpression />
+          <ZynkObjectMask>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string />
+            </Value>
+          </ZynkObjectMask>
+        </AutoGenerateAccountReferences>
+        <AutoCreateAccounts>false</AutoCreateAccounts>
+        <CheckCreditLimit>false</CheckCreditLimit>
+        <AutoAcknowledgeOrder>true</AutoAcknowledgeOrder>
+        <AutoDespatchOrder>false</AutoDespatchOrder>
+        <AutoPostInvoice>false</AutoPostInvoice>
+        <AutoPrintInvoice>false</AutoPrintInvoice>
+        <AutoPrintPickingList>AsSage</AutoPrintPickingList>
+        <InvoicePayments>false</InvoicePayments>
+        <ManualOrderNumber>false</ManualOrderNumber>
+        <PreventDuplicates>false</PreventDuplicates>
+        <ReadyForInvoicePrint>false</ReadyForInvoicePrint>
+        <ValidateDeliveryDates>false</ValidateDeliveryDates>
+        <VatSettings>
+          <Base>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Base>
+          <Eu>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Eu>
+          <EuVatReg>
+            <Enabled>false</Enabled>
+            <Sales>4</Sales>
+            <Carriage>4</Carriage>
+          </EuVatReg>
+          <Row>
+            <Enabled>false</Enabled>
+            <Sales>0</Sales>
+            <Carriage>0</Carriage>
+          </Row>
+        </VatSettings>
+        <AllowNegativeStock>true</AllowNegativeStock>
+        <AutoAllocateStockEnum>AsSage</AutoAllocateStockEnum>
+        <AutoCreateProducts>false</AutoCreateProducts>
+        <DefaultCategory>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>No Group</string>
+          </Value>
+        </DefaultCategory>
+        <DefaultCarriageSku>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>CARRIAGE</string>
+          </Value>
+        </DefaultCarriageSku>
+        <DefaultWarehouse>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>BARNSLEY</string>
+          </Value>
+        </DefaultWarehouse>
+        <ProductLookup>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sku</string>
+          </Value>
+        </ProductLookup>
+        <TraceableSortType>Default</TraceableSortType>
+        <UseMultipleWarehouses>false</UseMultipleWarehouses>
+        <UseWarehousesMarkedForTradingSales>false</UseWarehousesMarkedForTradingSales>
+        <WarehouseSortType>Default</WarehouseSortType>
+        <PricesIncludeTax>false</PricesIncludeTax>
+        <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+        <AlphabeticLength>3</AlphabeticLength>
+        <NumericLength>3</NumericLength>
+        <AutoAllocateStock>false</AutoAllocateStock>
+      </ImportSalesOrders>
+    </Task>
+    <Task type="Zynk.Internet.Http.HttpTask, Zynk.Internet.Http, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <HttpTask>
+        <LastResult>Success</LastResult>
+        <Name>&gt; Tap Spares - Import Despatch Notes to IC</Name>
+        <Enabled>true</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Unknown</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>true</Resume>
+            <LastRan>2024-05-24T12:27:26.2094519+01:00</LastRan>
+            <Id>8b4b1605-69f6-4514-b58a-b5db79106a7e</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com,sales@abode.eu,sdas@idslogic.co.uk</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode.  It tried 3 times.  Please check the connection is live to the Sage Instantcart App and try again.  Please call 01132560200 or 07793966386 to speak to an Instantcart support agent. </string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>false</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-04-29T10:01:45.041678+01:00</LastRan>
+        <Id>d1ec4324-e87e-466c-8596-b2d213158d27</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <Url>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=dispatchimport&amp;account=ABODETAP&amp;s=abodetapspares.instantcart.com&amp;t=08429aabd36b859d453bcb9e766dedfa&amp;time=115175734384</string>
+          </Value>
+        </Url>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <Timeout>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>120000</string>
+          </Value>
+        </Timeout>
+        <UserAgent>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Zynk Software Ltd/Zynk</string>
+          </Value>
+        </UserAgent>
+        <EncodingType>UTF8</EncodingType>
+        <ProtocolVersion>v1_1</ProtocolVersion>
+        <KeepAlive xsi:nil="true" />
+        <HeaderValues />
+        <FormValues />
+        <ContentsField>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ContentsField>
+        <Input>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Input>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </OutputFile>
+        <Method>GET</Method>
+        <Retries>3</Retries>
+        <CompressData>false</CompressData>
+      </HttpTask>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.ImportSalesOrders, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ImportSalesOrders>
+        <LastResult>Success</LastResult>
+        <Name>&lt; Tap Spares - Import Sales Orders to Sage 200</Name>
+        <Enabled>true</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Unknown</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>true</Resume>
+            <LastRan>2024-08-19T16:01:01.7387409+01:00</LastRan>
+            <Id>27ad76c9-838f-4569-a467-6891d1ef4066</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>zynk@abode.eu</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>sales@abode.eu,sdas@idslogic.co.uk</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>AWilkinson@abodedesigns.co.uk</string>
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Tap Spares Sage 200 Order Import Failed</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Hi There,
+
+The Sales import from Instantcart to Sage 200 failed for Tap-spares.com, please check that the maximum number of users for Sage 200 has 
+been reached.
+
+If you still receive this error after rectifying the above, please send an email to paul@instantcart.com or call 0113 256 0200 for further assistance.
+
+Many Thanks
+
+Zynk
+P.S: I Reside on the Sage 200 server, I will retry to run the workflow 3 times every 10 minutes after this message has been issued.</string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>true</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-04-29T10:01:46.6988729+01:00</LastRan>
+        <Id>6b23be41-bf4c-42c5-b67f-cb32d18a765e</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>b61778d6-03b9-4b52-bf15-e748886ae3ec</Id>
+        </ConnectionPointer>
+        <InputFile>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>True</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=sales&amp;account=ABODETAP&amp;defaultProductCode=TAPSPARE&amp;s=abodetapspares.instantcart.com&amp;t=08429aabd36b859d453bcb9e766dedfa&amp;time=115175734384</string>
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>tap_spares_sage_200_import_sales_orders_success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>tap_spares_sage_200_import_sales_orders_fail.xml</string>
+          </Value>
+        </FailFile>
+        <MatchFields />
+        <AutoGenerateAccountReferences>
+          <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+          <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+          <AlphabeticLength>4</AlphabeticLength>
+          <NumericLength>4</NumericLength>
+          <RegularExpression />
+          <ZynkObjectMask>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string />
+            </Value>
+          </ZynkObjectMask>
+        </AutoGenerateAccountReferences>
+        <AutoCreateAccounts>false</AutoCreateAccounts>
+        <CheckCreditLimit>false</CheckCreditLimit>
+        <AutoAcknowledgeOrder>true</AutoAcknowledgeOrder>
+        <AutoDespatchOrder>false</AutoDespatchOrder>
+        <AutoPostInvoice>false</AutoPostInvoice>
+        <AutoPrintInvoice>false</AutoPrintInvoice>
+        <AutoPrintPickingList>AsSage</AutoPrintPickingList>
+        <InvoicePayments>false</InvoicePayments>
+        <ManualOrderNumber>false</ManualOrderNumber>
+        <PreventDuplicates>false</PreventDuplicates>
+        <ReadyForInvoicePrint>false</ReadyForInvoicePrint>
+        <ValidateDeliveryDates>false</ValidateDeliveryDates>
+        <VatSettings>
+          <Base>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Base>
+          <Eu>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Eu>
+          <EuVatReg>
+            <Enabled>false</Enabled>
+            <Sales>4</Sales>
+            <Carriage>4</Carriage>
+          </EuVatReg>
+          <Row>
+            <Enabled>false</Enabled>
+            <Sales>0</Sales>
+            <Carriage>0</Carriage>
+          </Row>
+        </VatSettings>
+        <AllowNegativeStock>true</AllowNegativeStock>
+        <AutoAllocateStockEnum>AsSage</AutoAllocateStockEnum>
+        <AutoCreateProducts>false</AutoCreateProducts>
+        <DefaultCategory>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>No Group</string>
+          </Value>
+        </DefaultCategory>
+        <DefaultCarriageSku>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>CARRIAGE</string>
+          </Value>
+        </DefaultCarriageSku>
+        <DefaultWarehouse>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>BARNSLEY</string>
+          </Value>
+        </DefaultWarehouse>
+        <ProductLookup>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sku</string>
+          </Value>
+        </ProductLookup>
+        <TraceableSortType>Default</TraceableSortType>
+        <UseMultipleWarehouses>false</UseMultipleWarehouses>
+        <UseWarehousesMarkedForTradingSales>false</UseWarehousesMarkedForTradingSales>
+        <WarehouseSortType>Default</WarehouseSortType>
+        <PricesIncludeTax>false</PricesIncludeTax>
+        <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+        <AlphabeticLength>3</AlphabeticLength>
+        <NumericLength>3</NumericLength>
+        <AutoAllocateStock>false</AutoAllocateStock>
+      </ImportSalesOrders>
+    </Task>
+    <Task type="Zynk.Internet.Http.HttpTask, Zynk.Internet.Http, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <HttpTask>
+        <LastResult>Success</LastResult>
+        <Name>&gt; Proboil - Import Despatch Notes to IC</Name>
+        <Enabled>true</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Fail</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>false</Resume>
+            <LastRan>2016-01-15T01:03:11.6858534+00:00</LastRan>
+            <Id>8b4b1605-69f6-4514-b58a-b5db79106a7e</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com,sales@abode.eu,sdas@idslogic.co.uk</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode.  It tried 3 times.  Please check the connection is live to the Sage Instantcart App and try again.  Please call 01132560200 or 07793966386 to speak to an Instantcart support agent. </string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>false</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-04-29T10:01:46.7981586+01:00</LastRan>
+        <Id>2005c5c5-70a1-41e0-bc92-a63c24f53eea</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <Url>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=dispatchimport&amp;account=PROBOIL&amp;s=proboilx.instantcart.com&amp;t=b1d0cf2d2de75a19262da2fcf7407dc7&amp;time=115113455490</string>
+          </Value>
+        </Url>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <Timeout>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>120000</string>
+          </Value>
+        </Timeout>
+        <UserAgent>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Zynk Software Ltd/Zynk</string>
+          </Value>
+        </UserAgent>
+        <EncodingType>UTF8</EncodingType>
+        <ProtocolVersion>v1_1</ProtocolVersion>
+        <KeepAlive xsi:nil="true" />
+        <HeaderValues />
+        <FormValues />
+        <ContentsField>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ContentsField>
+        <Input>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Input>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </OutputFile>
+        <Method>GET</Method>
+        <Retries>3</Retries>
+        <CompressData>false</CompressData>
+      </HttpTask>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.ImportSalesOrders, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ImportSalesOrders>
+        <LastResult>Success</LastResult>
+        <Name>&lt; Proboil - Import Sales Orders to Sage 200</Name>
+        <Enabled>true</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Unknown</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>true</Resume>
+            <LastRan>2022-04-27T00:00:35.0634731+01:00</LastRan>
+            <Id>27ad76c9-838f-4569-a467-6891d1ef4066</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>zynk@abode.eu</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>sales@abode.eu,sdas@idslogic.co.uk</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>AWilkinson@abodedesigns.co.uk</string>
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Abode Shop Sage 200 Order Import Failed</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Hi There,
+
+The Sales import from Instantcart to Sage 200 failed for Pronteau, please check that 
+Emma is not logged into her Sage Account or the maximum number of users for Sage 200 has 
+been reached.
+
+If you still receive this error after rectifying the above, please send an email to paul@instantcart.com or call 0113 256 0200 for further assistance.
+
+Many Thanks
+
+Zynk
+P.S: I Reside on the Sage 200 server, I will retry to run the workflow 3 times every 10 minutes after this message has been issued.</string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>true</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-04-29T10:01:47.0178964+01:00</LastRan>
+        <Id>02259353-1832-4262-a0c9-45eba9f0e85b</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>b61778d6-03b9-4b52-bf15-e748886ae3ec</Id>
+        </ConnectionPointer>
+        <InputFile>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>True</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=sales&amp;account=PROBOIL&amp;s=proboilx.instantcart.com&amp;t=b1d0cf2d2de75a19262da2fcf7407dc7&amp;time=115113455490</string>
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>proboil_sage_200_import_sales_orders_success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>proboil_sage_200_import_sales_orders_fail.xml</string>
+          </Value>
+        </FailFile>
+        <MatchFields />
+        <AutoGenerateAccountReferences>
+          <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+          <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+          <AlphabeticLength>4</AlphabeticLength>
+          <NumericLength>4</NumericLength>
+          <RegularExpression />
+          <ZynkObjectMask>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string />
+            </Value>
+          </ZynkObjectMask>
+        </AutoGenerateAccountReferences>
+        <AutoCreateAccounts>false</AutoCreateAccounts>
+        <CheckCreditLimit>false</CheckCreditLimit>
+        <AutoAcknowledgeOrder>true</AutoAcknowledgeOrder>
+        <AutoDespatchOrder>false</AutoDespatchOrder>
+        <AutoPostInvoice>false</AutoPostInvoice>
+        <AutoPrintInvoice>false</AutoPrintInvoice>
+        <AutoPrintPickingList>AsSage</AutoPrintPickingList>
+        <InvoicePayments>false</InvoicePayments>
+        <ManualOrderNumber>false</ManualOrderNumber>
+        <PreventDuplicates>false</PreventDuplicates>
+        <ReadyForInvoicePrint>false</ReadyForInvoicePrint>
+        <ValidateDeliveryDates>false</ValidateDeliveryDates>
+        <VatSettings>
+          <Base>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Base>
+          <Eu>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Eu>
+          <EuVatReg>
+            <Enabled>false</Enabled>
+            <Sales>4</Sales>
+            <Carriage>4</Carriage>
+          </EuVatReg>
+          <Row>
+            <Enabled>false</Enabled>
+            <Sales>0</Sales>
+            <Carriage>0</Carriage>
+          </Row>
+        </VatSettings>
+        <AllowNegativeStock>true</AllowNegativeStock>
+        <AutoAllocateStockEnum>AsSage</AutoAllocateStockEnum>
+        <AutoCreateProducts>false</AutoCreateProducts>
+        <DefaultCategory>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>No Group</string>
+          </Value>
+        </DefaultCategory>
+        <DefaultCarriageSku>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>CARRIAGE</string>
+          </Value>
+        </DefaultCarriageSku>
+        <DefaultWarehouse>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>BARNSLEY</string>
+          </Value>
+        </DefaultWarehouse>
+        <ProductLookup>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sku</string>
+          </Value>
+        </ProductLookup>
+        <TraceableSortType>Default</TraceableSortType>
+        <UseMultipleWarehouses>false</UseMultipleWarehouses>
+        <UseWarehousesMarkedForTradingSales>false</UseWarehousesMarkedForTradingSales>
+        <WarehouseSortType>Default</WarehouseSortType>
+        <PricesIncludeTax>false</PricesIncludeTax>
+        <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+        <AlphabeticLength>3</AlphabeticLength>
+        <NumericLength>3</NumericLength>
+        <AutoAllocateStock>false</AutoAllocateStock>
+      </ImportSalesOrders>
+    </Task>
+    <Task type="Zynk.Internet.Http.HttpTask, Zynk.Internet.Http, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <HttpTask>
+        <LastResult>Success</LastResult>
+        <Name>&gt; Pronteau - Import Despatch Notes to IC</Name>
+        <Enabled>true</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Fail</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>true</Resume>
+            <LastRan>2023-06-05T16:29:48.7423931+01:00</LastRan>
+            <Id>8b4b1605-69f6-4514-b58a-b5db79106a7e</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com,sales@abode.eu,sdas@idslogic.co.uk</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode.  It tried 3 times.  Please check the connection is live to the Sage Instantcart App and try again.  Please call 01132560200 or 07793966386 to speak to an Instantcart support agent. </string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>false</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-04-29T10:01:47.1081592+01:00</LastRan>
+        <Id>b85e0568-f44a-4039-9876-a1c2af4f9beb</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <Url>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=dispatchimport&amp;account=PRONTEAU&amp;s=pronteau.instantcart.com&amp;t=e20a4414b0fcafea250ab98301785a55&amp;time=1468249947</string>
+          </Value>
+        </Url>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <Timeout>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>120000</string>
+          </Value>
+        </Timeout>
+        <UserAgent>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Zynk Software Ltd/Zynk</string>
+          </Value>
+        </UserAgent>
+        <EncodingType>UTF8</EncodingType>
+        <ProtocolVersion>v1_1</ProtocolVersion>
+        <KeepAlive xsi:nil="true" />
+        <HeaderValues />
+        <FormValues />
+        <ContentsField>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ContentsField>
+        <Input>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Input>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </OutputFile>
+        <Method>GET</Method>
+        <Retries>3</Retries>
+        <CompressData>false</CompressData>
+      </HttpTask>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.ImportSalesOrders, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ImportSalesOrders>
+        <LastResult>Success</LastResult>
+        <Name>&lt; Pronteau - Import Sales Orders to Sage</Name>
+        <Enabled>true</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Unknown</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>false</Resume>
+            <LastRan>2021-02-18T18:00:47.624615+00:00</LastRan>
+            <Id>27ad76c9-838f-4569-a467-6891d1ef4066</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>zynk@abode.eu</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>sales@abode.eu,sdas@idslogic.co.uk</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>AWilkinson@abodedesigns.co.uk</string>
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Abode Shop Sage 200 Order Import Failed</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Hi There,
+
+The Sales import from Instantcart to Sage 200 failed for Pronteau, please check that 
+Emma is not logged into her Sage Account or the maximum number of users for Sage 200 has 
+been reached.
+
+If you still receive this error after rectifying the above, please send an email to paul@instantcart.com or call 0113 256 0200 for further assistance.
+
+Many Thanks
+
+Zynk
+P.S: I Reside on the Sage 200 server, I will retry to run the workflow 3 times every 10 minutes after this message has been issued.</string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>true</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-04-29T10:01:47.3618296+01:00</LastRan>
+        <Id>f6bf653b-0207-4ab3-8431-0a40467f830a</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>b61778d6-03b9-4b52-bf15-e748886ae3ec</Id>
+        </ConnectionPointer>
+        <InputFile>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>True</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=sales&amp;account=PRONTEAU&amp;s=pronteau.instantcart.com&amp;t=e20a4414b0fcafea250ab98301785a55&amp;time=1468249947</string>
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>pronteau_sage_200_import_sales_orders_success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>pronteau_sage_200_import_sales_orders_fail.xml</string>
+          </Value>
+        </FailFile>
+        <MatchFields />
+        <AutoGenerateAccountReferences>
+          <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+          <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+          <AlphabeticLength>4</AlphabeticLength>
+          <NumericLength>4</NumericLength>
+          <RegularExpression />
+          <ZynkObjectMask>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string />
+            </Value>
+          </ZynkObjectMask>
+        </AutoGenerateAccountReferences>
+        <AutoCreateAccounts>false</AutoCreateAccounts>
+        <CheckCreditLimit>false</CheckCreditLimit>
+        <AutoAcknowledgeOrder>true</AutoAcknowledgeOrder>
+        <AutoDespatchOrder>false</AutoDespatchOrder>
+        <AutoPostInvoice>false</AutoPostInvoice>
+        <AutoPrintInvoice>false</AutoPrintInvoice>
+        <AutoPrintPickingList>AsSage</AutoPrintPickingList>
+        <InvoicePayments>false</InvoicePayments>
+        <ManualOrderNumber>false</ManualOrderNumber>
+        <PreventDuplicates>false</PreventDuplicates>
+        <ReadyForInvoicePrint>false</ReadyForInvoicePrint>
+        <ValidateDeliveryDates>false</ValidateDeliveryDates>
+        <VatSettings>
+          <Base>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Base>
+          <Eu>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Eu>
+          <EuVatReg>
+            <Enabled>false</Enabled>
+            <Sales>4</Sales>
+            <Carriage>4</Carriage>
+          </EuVatReg>
+          <Row>
+            <Enabled>false</Enabled>
+            <Sales>0</Sales>
+            <Carriage>0</Carriage>
+          </Row>
+        </VatSettings>
+        <AllowNegativeStock>true</AllowNegativeStock>
+        <AutoAllocateStockEnum>AsSage</AutoAllocateStockEnum>
+        <AutoCreateProducts>false</AutoCreateProducts>
+        <DefaultCategory>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>No Group</string>
+          </Value>
+        </DefaultCategory>
+        <DefaultCarriageSku>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>CARRIAGE</string>
+          </Value>
+        </DefaultCarriageSku>
+        <DefaultWarehouse>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>BARNSLEY</string>
+          </Value>
+        </DefaultWarehouse>
+        <ProductLookup>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sku</string>
+          </Value>
+        </ProductLookup>
+        <TraceableSortType>Default</TraceableSortType>
+        <UseMultipleWarehouses>false</UseMultipleWarehouses>
+        <UseWarehousesMarkedForTradingSales>false</UseWarehousesMarkedForTradingSales>
+        <WarehouseSortType>Default</WarehouseSortType>
+        <PricesIncludeTax>false</PricesIncludeTax>
+        <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+        <AlphabeticLength>3</AlphabeticLength>
+        <NumericLength>3</NumericLength>
+        <AutoAllocateStock>false</AutoAllocateStock>
+      </ImportSalesOrders>
+    </Task>
+    <Task type="Zynk.Internet.Http.HttpTask, Zynk.Internet.Http, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <HttpTask>
+        <LastResult>Success</LastResult>
+        <Name>&gt; Abode Designs - Import Despatch Notes to IC</Name>
+        <Enabled>false</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Resume</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>false</Resume>
+            <LastRan>2021-01-27T12:15:16.4694466+00:00</LastRan>
+            <Id>8b4b1605-69f6-4514-b58a-b5db79106a7e</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode.  It tried 3 times.  Please check the connection is live to the Sage Instantcart App and try again.  Please call 01132560200 or 07793966386 to speak to an Instantcart support agent. </string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>false</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-04-30T10:01:45.0081797+01:00</LastRan>
+        <Id>159b6b5f-6977-432a-bec2-60f7779833d0</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <Url>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=dispatchimport&amp;account=ABODEDES&amp;s=abodedesigns.instantcart.com&amp;t=4fcacb639eefbcae1cdaed3787e0baee&amp;time=115116430224</string>
+          </Value>
+        </Url>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <Timeout>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>120000</string>
+          </Value>
+        </Timeout>
+        <UserAgent>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Zynk Software Ltd/Zynk</string>
+          </Value>
+        </UserAgent>
+        <EncodingType>UTF8</EncodingType>
+        <ProtocolVersion>v1_1</ProtocolVersion>
+        <KeepAlive xsi:nil="true" />
+        <HeaderValues />
+        <FormValues />
+        <ContentsField>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ContentsField>
+        <Input>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Input>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </OutputFile>
+        <Method>GET</Method>
+        <Retries>3</Retries>
+        <CompressData>false</CompressData>
+      </HttpTask>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.ImportSalesOrders, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ImportSalesOrders>
+        <LastResult>Success</LastResult>
+        <Name>&lt; Abode Designs - Import Sales Orders to Sage</Name>
+        <Enabled>false</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Unknown</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>false</Resume>
+            <LastRan>2020-08-06T15:04:43.5212613+01:00</LastRan>
+            <Id>27ad76c9-838f-4569-a467-6891d1ef4066</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>zynk@abode.eu</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>sales@abode.eu</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>AWilkinson@abodedesigns.co.uk</string>
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Abode Shop Sage 200 Order Import Failed</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Hi There,
+
+The Sales import from Instantcart to Sage 200 failed for Abode Shop, please check that the maximum number of users for Sage 200 has 
+been reached.
+
+If you still receive this error after rectifying the above, please send an email to paul@instantcart.com or call 0113 256 0200 for further assistance.
+
+Many Thanks
+
+Zynk
+P.S: I Reside on the Sage 200 server, I will retry to run the workflow 3 times every 10 minutes after this message has been issued.</string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>true</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-04-30T10:01:45.5757044+01:00</LastRan>
+        <Id>9541634d-3de1-4297-ad15-19e4ffd4f0ff</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>b61778d6-03b9-4b52-bf15-e748886ae3ec</Id>
+        </ConnectionPointer>
+        <InputFile>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>True</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=sales&amp;account=ABODEDES&amp;s=abodedesigns.instantcart.com&amp;t=4fcacb639eefbcae1cdaed3787e0baee&amp;time=115116430224</string>
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>abode_sage_200_import_sales_orders_success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>abode_sage_200_import_sales_orders_fail.xml</string>
+          </Value>
+        </FailFile>
+        <MatchFields />
+        <AutoGenerateAccountReferences>
+          <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+          <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+          <AlphabeticLength>4</AlphabeticLength>
+          <NumericLength>4</NumericLength>
+          <RegularExpression />
+          <ZynkObjectMask>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string />
+            </Value>
+          </ZynkObjectMask>
+        </AutoGenerateAccountReferences>
+        <AutoCreateAccounts>false</AutoCreateAccounts>
+        <CheckCreditLimit>false</CheckCreditLimit>
+        <AutoAcknowledgeOrder>true</AutoAcknowledgeOrder>
+        <AutoDespatchOrder>false</AutoDespatchOrder>
+        <AutoPostInvoice>false</AutoPostInvoice>
+        <AutoPrintInvoice>false</AutoPrintInvoice>
+        <AutoPrintPickingList>AsSage</AutoPrintPickingList>
+        <InvoicePayments>false</InvoicePayments>
+        <ManualOrderNumber>false</ManualOrderNumber>
+        <PreventDuplicates>false</PreventDuplicates>
+        <ReadyForInvoicePrint>false</ReadyForInvoicePrint>
+        <ValidateDeliveryDates>false</ValidateDeliveryDates>
+        <VatSettings>
+          <Base>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Base>
+          <Eu>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Eu>
+          <EuVatReg>
+            <Enabled>false</Enabled>
+            <Sales>4</Sales>
+            <Carriage>4</Carriage>
+          </EuVatReg>
+          <Row>
+            <Enabled>false</Enabled>
+            <Sales>0</Sales>
+            <Carriage>0</Carriage>
+          </Row>
+        </VatSettings>
+        <AllowNegativeStock>true</AllowNegativeStock>
+        <AutoAllocateStockEnum>AsSage</AutoAllocateStockEnum>
+        <AutoCreateProducts>false</AutoCreateProducts>
+        <DefaultCategory>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>No Group</string>
+          </Value>
+        </DefaultCategory>
+        <DefaultCarriageSku>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>CARRIAGE</string>
+          </Value>
+        </DefaultCarriageSku>
+        <DefaultWarehouse>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>BARNSLEY</string>
+          </Value>
+        </DefaultWarehouse>
+        <ProductLookup>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sku</string>
+          </Value>
+        </ProductLookup>
+        <TraceableSortType>Default</TraceableSortType>
+        <UseMultipleWarehouses>false</UseMultipleWarehouses>
+        <UseWarehousesMarkedForTradingSales>false</UseWarehousesMarkedForTradingSales>
+        <WarehouseSortType>Default</WarehouseSortType>
+        <PricesIncludeTax>false</PricesIncludeTax>
+        <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+        <AlphabeticLength>3</AlphabeticLength>
+        <NumericLength>3</NumericLength>
+        <AutoAllocateStock>false</AutoAllocateStock>
+      </ImportSalesOrders>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.ExportStockRecordsV2, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ExportStockRecordsV2>
+        <LastResult>Success</LastResult>
+        <Name>&gt; STOCK: Sage 200 - All Sites - Export to file - Filtered</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-04-29T10:02:11.9447555+01:00</LastRan>
+        <Id>a8b0885a-9fdc-4e98-8360-c9189c74a8b3</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>b61778d6-03b9-4b52-bf15-e748886ae3ec</Id>
+        </ConnectionPointer>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_export_stock_records.xml</string>
+          </Value>
+        </OutputFile>
+        <SdkQuerySettings>
+          <Columns>
+            <string>[StockItem].[ProductGroupID]</string>
+          </Columns>
+          <Joins />
+          <Where>
+            <Where>
+              <Comparison>Equals</Comparison>
+              <Value>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>0</string>
+                </Value>
+              </Value>
+              <ValueTo>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </ValueTo>
+              <LiteralValue>true</LiteralValue>
+              <FieldName>StockItemStatusID</FieldName>
+              <SubClauses />
+              <LogicOperator>And</LogicOperator>
+            </Where>
+            <Where>
+              <Comparison>In</Comparison>
+              <Value>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>23676891,38978,38985,38971,38992,39208</string>
+                </Value>
+              </Value>
+              <LiteralValue>true</LiteralValue>
+              <FieldName>ProductGroupID</FieldName>
+              <SubClauses />
+              <LogicOperator>And</LogicOperator>
+            </Where>
+          </Where>
+        </SdkQuerySettings>
+        <ExportSettings>
+          <OpLock>163757689</OpLock>
+          <DateTimeCreated>2026-03-30T18:45:25.457</DateTimeCreated>
+          <ExportType>Modified</ExportType>
+          <PageSize>100</PageSize>
+          <Timeout>30</Timeout>
+        </ExportSettings>
+        <CleanseCharacters />
+        <UseCaching>true</UseCaching>
+        <QuerySettings>
+          <Columns>
+            <string>[StockItem].[ProductGroupID]</string>
+          </Columns>
+          <Joins />
+          <Where>
+            <Where>
+              <Comparison>Equals</Comparison>
+              <Value>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>0</string>
+                </Value>
+              </Value>
+              <ValueTo>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </ValueTo>
+              <LiteralValue>true</LiteralValue>
+              <FieldName>StockItemStatusID</FieldName>
+              <SubClauses />
+              <LogicOperator>And</LogicOperator>
+            </Where>
+            <Where>
+              <Comparison>In</Comparison>
+              <Value>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>23676891,38978,38985,38971,38992,39208</string>
+                </Value>
+              </Value>
+              <LiteralValue>true</LiteralValue>
+              <FieldName>ProductGroupID</FieldName>
+              <SubClauses />
+              <LogicOperator>And</LogicOperator>
+            </Where>
+          </Where>
+        </QuerySettings>
+        <StandardPrice>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Standard</string>
+          </Value>
+        </StandardPrice>
+        <RRPPrice>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </RRPPrice>
+        <ExportLocations>false</ExportLocations>
+        <ExportMaximumBuildQty>false</ExportMaximumBuildQty>
+        <ExportTracableItems>false</ExportTracableItems>
+        <ExportWebTab>false</ExportWebTab>
+        <ExportBOMs>false</ExportBOMs>
+        <ExportUnitsOfSale>false</ExportUnitsOfSale>
+        <ExportSearchCategories>false</ExportSearchCategories>
+        <ExportSuppliers>false</ExportSuppliers>
+      </ExportStockRecordsV2>
+    </Task>
+    <Task type="Zynk.Internet.Ftp.FtpUpload, Zynk.Internet.Ftp, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <FtpUpload>
+        <LastResult>Success</LastResult>
+        <Name>&gt; Abode Designs - Upload Stock file to FTP </Name>
+        <Enabled>false</Enabled>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-04-30T10:01:49.7399795+01:00</LastRan>
+        <Id>50927d09-a982-488e-bf6d-484fef9b36a8</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionGroupName />
+        <Directory>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>/</string>
+          </Value>
+        </Directory>
+        <FtpConnectionPointer>
+          <Id>be56d229-11d8-4156-b0fd-32e19a964b0e</Id>
+        </FtpConnectionPointer>
+        <Timeout xsi:nil="true" />
+        <Server>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>ftp://</string>
+          </Value>
+        </Server>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <UsePassive>true</UsePassive>
+        <UseSSL>false</UseSSL>
+        <UseBinary>true</UseBinary>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_export_stock_records.xml</string>
+          </Value>
+        </InputFile>
+        <OutputFile>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>stock.xml</string>
+          </Value>
+        </OutputFile>
+        <OverwriteFile>true</OverwriteFile>
+        <Retries>2</Retries>
+        <TemporaryUploadSetting>
+          <Option>NotEnabled</Option>
+          <TemporaryFileExtension>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string>tmp</string>
+            </Value>
+          </TemporaryFileExtension>
+          <TemporaryDirectory>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string>Temp</string>
+            </Value>
+          </TemporaryDirectory>
+        </TemporaryUploadSetting>
+        <PrependTimestamp>false</PrependTimestamp>
+        <TimestampFormat>yyyyMMddHHmmssffff</TimestampFormat>
+      </FtpUpload>
+    </Task>
+    <Task type="Zynk.Internet.Http.HttpTask, Zynk.Internet.Http, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <HttpTask>
+        <LastResult>Success</LastResult>
+        <Name>&gt; Abode Designs - Import Stock file to IC</Name>
+        <Enabled>false</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Resume</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>false</Resume>
+            <LastRan>2020-04-14T14:50:04.2277249+01:00</LastRan>
+            <Id>8b4b1605-69f6-4514-b58a-b5db79106a7e</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode.  It tried 3 times.  Please check the connection is live to the Sage Instantcart App and try again.  Please call 01132560200 or 07793966386 to speak to an Instantcart support agent. </string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>false</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-04-30T10:01:56.596806+01:00</LastRan>
+        <Id>792bca75-10b4-4f4d-83a8-671a0a0a75ae</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <Url>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=stockimport&amp;account=ABODEDESIGNS&amp;s=abodedesigns.instantcart.com&amp;t=4fcacb639eefbcae1cdaed3787e0baee&amp;time=115116430224</string>
+          </Value>
+        </Url>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <Timeout>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>999000</string>
+          </Value>
+        </Timeout>
+        <UserAgent>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Zynk Software Ltd/Zynk</string>
+          </Value>
+        </UserAgent>
+        <EncodingType>UTF8</EncodingType>
+        <ProtocolVersion>v1_1</ProtocolVersion>
+        <KeepAlive xsi:nil="true" />
+        <HeaderValues />
+        <FormValues />
+        <ContentsField>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ContentsField>
+        <Input>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Input>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </OutputFile>
+        <Method>GET</Method>
+        <Retries>1</Retries>
+        <CompressData>false</CompressData>
+      </HttpTask>
+    </Task>
+    <Task type="Zynk.Internet.Http.HttpTask, Zynk.Internet.Http, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <HttpTask>
+        <LastResult>Success</LastResult>
+        <Name>&gt; Pronteau - Import Stock file to IC</Name>
+        <Enabled>true</Enabled>
+        <OnFailure type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+          <SendEmail>
+            <LastResult>Fail</LastResult>
+            <Name>Send Email</Name>
+            <Enabled>true</Enabled>
+            <BreakOnFailure>true</BreakOnFailure>
+            <CanResume>true</CanResume>
+            <Resume>true</Resume>
+            <LastRan>2022-01-17T17:55:42.7296115+00:00</LastRan>
+            <Id>8b4b1605-69f6-4514-b58a-b5db79106a7e</Id>
+            <DebugLoggingEnabled>false</DebugLoggingEnabled>
+            <From>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com</string>
+              </Value>
+            </From>
+            <FromName>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </FromName>
+            <To>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>paul@instantcart.com,sales@abode.eu,sdas@idslogic.co.uk</string>
+              </Value>
+            </To>
+            <Cc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Cc>
+            <Bcc>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Bcc>
+            <Subject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode</string>
+              </Value>
+            </Subject>
+            <Body>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>Dispatch Import To Instantcart Failed for Abode.  It tried 3 times.  Please check the connection is live to the Sage Instantcart App and try again.  Please call 01132560200 or 07793966386 to speak to an Instantcart support agent. </string>
+              </Value>
+            </Body>
+            <Attachments>
+              <Type>ListValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </Attachments>
+            <HTMLBody>false</HTMLBody>
+            <Retries>1</Retries>
+            <ConnectionPointer>
+              <Id>7257f80e-bd13-46cf-b941-df9680c96be6</Id>
+            </ConnectionPointer>
+            <SmtpServer>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>127.0.0.1</string>
+              </Value>
+            </SmtpServer>
+            <SmtpUsername>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpUsername>
+            <SmtpPassword>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string />
+              </Value>
+            </SmtpPassword>
+            <Port>25</Port>
+            <EnableSSL>false</EnableSSL>
+            <Timeout>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>6000</string>
+              </Value>
+            </Timeout>
+          </SendEmail>
+        </OnFailure>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-04-29T10:02:18.8913819+01:00</LastRan>
+        <Id>d9a4a790-5497-4cf9-a612-053793866df7</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <Url>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://sage.icarthost.com/import/import.php?type=stockimport&amp;account=PRONTEAU&amp;s=pronteau.instantcart.com&amp;t=e20a4414b0fcafea250ab98301785a55&amp;time=1468249947</string>
+          </Value>
+        </Url>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <Timeout>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>999000</string>
+          </Value>
+        </Timeout>
+        <UserAgent>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Zynk Software Ltd/Zynk</string>
+          </Value>
+        </UserAgent>
+        <EncodingType>UTF8</EncodingType>
+        <ProtocolVersion>v1_1</ProtocolVersion>
+        <KeepAlive xsi:nil="true" />
+        <HeaderValues />
+        <FormValues />
+        <ContentsField>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ContentsField>
+        <Input>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Input>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </OutputFile>
+        <Method>GET</Method>
+        <Retries>1</Retries>
+        <CompressData>false</CompressData>
+      </HttpTask>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Success</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-04-29T10:02:19.0662833+01:00</LastRan>
+        <Id>2043627c-4a4a-44e3-a076-565104ced117</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ArchiveDirectory>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+        <ExternalFilesAndDirectories>
+          <Type>ListValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ExternalFilesAndDirectories>
+        <HouseKeepingSettings>
+          <Enabled>false</Enabled>
+          <Type>NumberOfDays</Type>
+          <Number>30</Number>
+        </HouseKeepingSettings>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>96b49ff0-706e-469b-a5b8-150377354f08</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>abode-shop</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>true</UseMutex>
+  <EmailReport>OnFailure</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>2024.10.2</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+  <WorkingDirectory>C:\ProgramData\Zynk Software\Zynk\2.0\Data\abode-shop</WorkingDirectory>
+  <FilePath>C:\ProgramData\Zynk Software\Zynk\2.0\My Workflows\abode-shop.wkf</FilePath>
+</Workflow>

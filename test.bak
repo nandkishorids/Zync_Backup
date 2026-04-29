@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2025-01-30T13:36:36.6945014+00:00</LastRan>
+  <ShouldResume>true</ShouldResume>
+  <Resume>true</Resume>
+  <LastResult>Fail</LastResult>
+  <Tasks>
+    <Task type="Zynk.Ecommerce.MagentoV2.Tasks.DownloadOrders, Zynk.Ecommerce.MagentoV2, Version=2022.1.1.23271, Culture=neutral, PublicKeyToken=null">
+      <DownloadOrders>
+        <LastResult>Fail</LastResult>
+        <Name>Export Orders</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-01-30T13:36:36.6825116+00:00</LastRan>
+        <Id>fe163ee5-a245-44d2-b58f-f6a6c0066520</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>f80b36f6-65eb-4564-b095-4a22c05e8d03</Id>
+        </ConnectionPointer>
+        <StoreCode>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>default</string>
+          </Value>
+        </StoreCode>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>magento_export_orders.xml</string>
+          </Value>
+        </OutputFile>
+        <PageSize>50</PageSize>
+        <FilterGroups />
+        <DownloadSettings>
+          <DateModified>2025-01-30T13:34:57.7862744+00:00</DateModified>
+          <DateCreated>2025-01-30T13:34:57.7862744+00:00</DateCreated>
+          <ExportType>Modified</ExportType>
+        </DownloadSettings>
+        <ExportCustomer>false</ExportCustomer>
+        <ExportProducts>false</ExportProducts>
+        <ExportCustomOptions>false</ExportCustomOptions>
+        <ExportShipments>false</ExportShipments>
+      </DownloadOrders>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.ImportSalesOrders, Zynk.Connect.Sage200V13, Version=2022.1.1.23269, Culture=neutral, PublicKeyToken=null">
+      <ImportSalesOrders>
+        <LastResult>Unknown</LastResult>
+        <Name>Import Sales Orders</Name>
+        <Enabled>false</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>2869438d-22d5-47c4-97bd-26e99048a28f</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>97db0afb-e5c6-4c00-94ba-df4242f33978</Id>
+        </ConnectionPointer>
+        <InputFile>
+          <Type>PreviousValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_import_sales_orders_success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_import_sales_orders_fail.xml</string>
+          </Value>
+        </FailFile>
+        <ReadyForInvoicePrint>false</ReadyForInvoicePrint>
+        <ManualOrderNumber>false</ManualOrderNumber>
+        <CheckCreditLimit>false</CheckCreditLimit>
+        <ProductLookup>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sku</string>
+          </Value>
+        </ProductLookup>
+        <AutoCreateProducts>false</AutoCreateProducts>
+        <AutoAllocateStockEnum>AsSage</AutoAllocateStockEnum>
+        <AllowNegativeStock>true</AllowNegativeStock>
+        <AutoDespatchOrder>false</AutoDespatchOrder>
+        <ValidateDeliveryDates>false</ValidateDeliveryDates>
+        <AutoAcknowledgeOrder>false</AutoAcknowledgeOrder>
+        <AutoPrintPickingList>AsSage</AutoPrintPickingList>
+        <AutoPrintInvoice>false</AutoPrintInvoice>
+        <AutoPostInvoice>false</AutoPostInvoice>
+        <DefaultCategory>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>No Group</string>
+          </Value>
+        </DefaultCategory>
+        <DefaultWarehouse>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>HOME</string>
+          </Value>
+        </DefaultWarehouse>
+        <DefaultCarriageSku>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>CAR001</string>
+          </Value>
+        </DefaultCarriageSku>
+        <UseMultipleWarehouses>false</UseMultipleWarehouses>
+        <UseWarehousesMarkedForTradingSales>true</UseWarehousesMarkedForTradingSales>
+        <WarehouseSortType>Default</WarehouseSortType>
+        <TraceableSortType>Default</TraceableSortType>
+        <InvoicePayments>false</InvoicePayments>
+        <VatSettings>
+          <Base>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Base>
+          <Eu>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Eu>
+          <EuVatReg>
+            <Enabled>false</Enabled>
+            <Sales>4</Sales>
+            <Carriage>4</Carriage>
+          </EuVatReg>
+          <Row>
+            <Enabled>false</Enabled>
+            <Sales>0</Sales>
+            <Carriage>0</Carriage>
+          </Row>
+        </VatSettings>
+        <PricesIncludeTax>false</PricesIncludeTax>
+        <MatchFields />
+        <AccountCreationSettings>
+          <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+          <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+          <AlphabeticLength>4</AlphabeticLength>
+          <NumericLength>4</NumericLength>
+          <RegularExpression />
+          <ZynkObjectMask>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string />
+            </Value>
+          </ZynkObjectMask>
+          <AutoCreateAccounts>false</AutoCreateAccounts>
+        </AccountCreationSettings>
+        <PreventDuplicates>true</PreventDuplicates>
+        <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+        <AlphabeticLength>3</AlphabeticLength>
+        <NumericLength>3</NumericLength>
+        <AutoAllocateStock>false</AutoAllocateStock>
+      </ImportSalesOrders>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>6fcc47c2-5ce3-4c26-94e9-fdc07dda534f</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>test</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>true</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>2022.1.1</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+  <WorkingDirectory>C:\ProgramData\Zynk Software\Zynk\2.0\Data\test</WorkingDirectory>
+  <FilePath>C:\ProgramData\Zynk Software\Zynk\2.0\My Workflows\test.wkf</FilePath>
+</Workflow>

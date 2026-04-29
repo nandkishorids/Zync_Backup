@@ -1,0 +1,1291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2026-01-08T13:58:44.3772351+00:00</LastRan>
+  <ShouldResume>true</ShouldResume>
+  <Resume>false</Resume>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Ecommerce.MagentoV2.Tasks.DownloadOrders, Zynk.Ecommerce.MagentoV2, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <DownloadOrders>
+        <LastResult>SuccessNoData</LastResult>
+        <Name>Export Orders - AbodeDesigns</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>false</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-01-08T13:58:31.5201099+00:00</LastRan>
+        <Id>6b1c208b-f372-4366-b7d6-32f5e37aec61</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>806aa74b-f6e1-4458-b28f-5a066cbed52c</Id>
+        </ConnectionPointer>
+        <StoreCode>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>default</string>
+          </Value>
+        </StoreCode>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>magento_export_orders.xml</string>
+          </Value>
+        </OutputFile>
+        <PageSize>50</PageSize>
+        <FilterGroups>
+          <FilterGroup>
+            <filters>
+              <Filter>
+                <Field>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <UseEncryption>False</UseEncryption>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string>store_id</string>
+                  </Value>
+                </Field>
+                <Value>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <UseEncryption>False</UseEncryption>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string>1</string>
+                  </Value>
+                </Value>
+                <condition_type_enum>Equal</condition_type_enum>
+                <condition_type>eq</condition_type>
+              </Filter>
+            </filters>
+          </FilterGroup>
+          <FilterGroup>
+            <filters>
+              <Filter>
+                <Field>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <UseEncryption>False</UseEncryption>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string>status</string>
+                  </Value>
+                </Field>
+                <Value>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <UseEncryption>False</UseEncryption>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string>processing</string>
+                  </Value>
+                </Value>
+                <condition_type_enum>Equal</condition_type_enum>
+                <condition_type>eq</condition_type>
+              </Filter>
+            </filters>
+          </FilterGroup>
+          <FilterGroup>
+            <filters>
+              <Filter>
+                <Field>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <UseEncryption>False</UseEncryption>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string>sage_sync_status</string>
+                  </Value>
+                </Field>
+                <Value>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <UseEncryption>False</UseEncryption>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string>0</string>
+                  </Value>
+                </Value>
+                <condition_type_enum>Equal</condition_type_enum>
+                <condition_type>eq</condition_type>
+              </Filter>
+            </filters>
+          </FilterGroup>
+        </FilterGroups>
+        <DownloadSettings>
+          <DateModified>2026-01-08T13:58:31</DateModified>
+          <DateCreated>2026-01-08T13:57:48</DateCreated>
+          <ExportType>Modified</ExportType>
+        </DownloadSettings>
+        <ExportCustomer>true</ExportCustomer>
+        <ExportProducts>false</ExportProducts>
+        <ExportCustomOptions>false</ExportCustomOptions>
+        <ExportShipments>false</ExportShipments>
+        <IgnoreRelatedRecordErrors>false</IgnoreRelatedRecordErrors>
+      </DownloadOrders>
+    </Task>
+    <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <XsltTransform>
+        <LastResult>Success</LastResult>
+        <Name>XSLT Transform - AbodeDesigns</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-01-08T13:58:31.6401083+00:00</LastRan>
+        <Id>b610d45e-90c0-4283-9ece-d22995040785</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>magento_export_orders.xml</string>
+          </Value>
+        </InputFile>
+        <XsltFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>XSLT\magento-orders-to-sage-200-orders.xslt</string>
+          </Value>
+        </XsltFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_import_sales_orders.xml</string>
+          </Value>
+        </OutputFile>
+        <Parameters>
+          <Variable Key="SetPaymentInfo" Encrypt="False" Encrypted="False">
+            <ZynkObject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>true</string>
+              </Value>
+            </ZynkObject>
+          </Variable>
+          <Variable Key="SetAccountRefNumber" Encrypt="False" Encrypted="False">
+            <ZynkObject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>ABODEDES</string>
+              </Value>
+            </ZynkObject>
+          </Variable>
+          <Variable Key="BankAccount" Encrypt="False" Encrypted="False">
+            <ZynkObject>
+              <Type>StaticValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <UseEncryption>False</UseEncryption>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>1200</string>
+              </Value>
+            </ZynkObject>
+          </Variable>
+        </Parameters>
+        <LogFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </LogFile>
+        <EnableXsltDebugging>false</EnableXsltDebugging>
+      </XsltTransform>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.ImportSalesOrders, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ImportSalesOrders>
+        <LastResult>Success</LastResult>
+        <Name>Import Sales Orders - AbodeDesigns</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>false</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-01-08T13:58:41.8956748+00:00</LastRan>
+        <Id>3c987fd3-0d5c-4af7-9fb5-045febdf06c0</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>97db0afb-e5c6-4c00-94ba-df4242f33978</Id>
+        </ConnectionPointer>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_import_sales_orders.xml</string>
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_import_sales_orders_success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_import_sales_orders_fail.xml</string>
+          </Value>
+        </FailFile>
+        <MatchFields>
+          <MatchFieldsEnum>E_MAIL</MatchFieldsEnum>
+        </MatchFields>
+        <AutoGenerateAccountReferences>
+          <AutoGenerateAccountReference>true</AutoGenerateAccountReference>
+          <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+          <AlphabeticLength>4</AlphabeticLength>
+          <NumericLength>4</NumericLength>
+          <RegularExpression />
+          <Mask />
+          <ZynkObjectMask>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string />
+            </Value>
+          </ZynkObjectMask>
+        </AutoGenerateAccountReferences>
+        <AutoCreateAccounts>true</AutoCreateAccounts>
+        <CheckCreditLimit>false</CheckCreditLimit>
+        <AutoAcknowledgeOrder>true</AutoAcknowledgeOrder>
+        <AutoDespatchOrder>false</AutoDespatchOrder>
+        <AutoPostInvoice>false</AutoPostInvoice>
+        <AutoPrintInvoice>false</AutoPrintInvoice>
+        <AutoPrintPickingList>AsSage</AutoPrintPickingList>
+        <InvoicePayments>false</InvoicePayments>
+        <ManualOrderNumber>false</ManualOrderNumber>
+        <PreventDuplicates>false</PreventDuplicates>
+        <ReadyForInvoicePrint>false</ReadyForInvoicePrint>
+        <ValidateDeliveryDates>false</ValidateDeliveryDates>
+        <VatSettings>
+          <Base>
+            <Enabled>true</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Base>
+          <Eu>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Eu>
+          <EuVatReg>
+            <Enabled>false</Enabled>
+            <Sales>4</Sales>
+            <Carriage>4</Carriage>
+          </EuVatReg>
+          <Row>
+            <Enabled>false</Enabled>
+            <Sales>0</Sales>
+            <Carriage>0</Carriage>
+          </Row>
+        </VatSettings>
+        <AllowNegativeStock>true</AllowNegativeStock>
+        <AutoAllocateStockEnum>AsSage</AutoAllocateStockEnum>
+        <AutoCreateProducts>true</AutoCreateProducts>
+        <DefaultCategory>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>No Group</string>
+          </Value>
+        </DefaultCategory>
+        <DefaultCarriageSku>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>CARRIAGE</string>
+          </Value>
+        </DefaultCarriageSku>
+        <DefaultWarehouse>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>ROTHERHAM</string>
+          </Value>
+        </DefaultWarehouse>
+        <ProductLookup>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sku</string>
+          </Value>
+        </ProductLookup>
+        <TraceableSortType>Default</TraceableSortType>
+        <UseMultipleWarehouses>false</UseMultipleWarehouses>
+        <UseWarehousesMarkedForTradingSales>true</UseWarehousesMarkedForTradingSales>
+        <WarehouseSortType>Default</WarehouseSortType>
+        <PricesIncludeTax>false</PricesIncludeTax>
+        <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+        <AlphabeticLength>3</AlphabeticLength>
+        <NumericLength>3</NumericLength>
+        <AutoAllocateStock>false</AutoAllocateStock>
+      </ImportSalesOrders>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.PostInvoices, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <PostInvoices>
+        <LastResult>Unknown</LastResult>
+        <Name>Post Invoices</Name>
+        <Enabled>false</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>9aba7112-6f32-4215-a6a5-fcaa96e49747</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>b61778d6-03b9-4b52-bf15-e748886ae3ec</Id>
+        </ConnectionPointer>
+        <InputFile>
+          <Type>PreviousValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_post_invoices_success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_post_invoices_fail.xml</string>
+          </Value>
+        </FailFile>
+      </PostInvoices>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.ExportStockInventoryV2, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ExportStockInventoryV2>
+        <LastResult>Cancelled</LastResult>
+        <Name>Export Stock Inventory</Name>
+        <Enabled>false</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-02-05T10:59:48.3890464+00:00</LastRan>
+        <Id>20250998-e427-4680-afb6-ee1f5276b3fe</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>97db0afb-e5c6-4c00-94ba-df4242f33978</Id>
+        </ConnectionPointer>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_export_stock_inventory.xml</string>
+          </Value>
+        </OutputFile>
+        <SdkQuerySettings>
+          <Columns />
+          <Joins />
+          <Where />
+        </SdkQuerySettings>
+        <ExportSettings>
+          <OpLock>0</OpLock>
+          <DateTimeCreated>2025-02-05T10:56:28.4810097+00:00</DateTimeCreated>
+          <ExportType>Modified</ExportType>
+          <PageSize>100</PageSize>
+          <Timeout>30</Timeout>
+        </ExportSettings>
+        <CleanseCharacters />
+        <UseCaching>true</UseCaching>
+        <QuerySettings>
+          <Columns />
+          <Joins />
+          <Where />
+        </QuerySettings>
+        <ExportTraceable>false</ExportTraceable>
+        <ExportAllTraceable>false</ExportAllTraceable>
+        <ExportMaximumBuildQty>false</ExportMaximumBuildQty>
+      </ExportStockInventoryV2>
+    </Task>
+    <Task type="Zynk.Internet.WinSCP.Tasks.WinSCPUploadFile, Zynk.Internet.WinSCP, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <WinSCPUploadFile>
+        <LastResult>Success</LastResult>
+        <Name>Import Stock Inventory to FTP</Name>
+        <Enabled>false</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-02-05T11:39:56.618609+00:00</LastRan>
+        <Id>22a12c87-e743-46f5-bac3-93f268e363dc</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>225c6aeb-de9c-4bce-a284-bd91c7387271</Id>
+        </ConnectionPointer>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_export_stock_inventory.xml</string>
+          </Value>
+        </InputFile>
+        <Directory>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>/Sage</string>
+          </Value>
+        </Directory>
+        <OutputFile>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>abode-stock.xml</string>
+          </Value>
+        </OutputFile>
+        <OverwriteFile>true</OverwriteFile>
+        <Permissions>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Permissions>
+        <PrependTimestamp>false</PrependTimestamp>
+        <PreserveTimestamp>true</PreserveTimestamp>
+        <Retries>2</Retries>
+        <TemporaryUploadSetting>
+          <Option>NotEnabled</Option>
+          <TemporaryFileExtension>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string>tmp</string>
+            </Value>
+          </TemporaryFileExtension>
+          <TemporaryDirectory>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string>Temp</string>
+            </Value>
+          </TemporaryDirectory>
+        </TemporaryUploadSetting>
+        <TimestampFormat>yyyyMMddHHmmssffff</TimestampFormat>
+      </WinSCPUploadFile>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.ExportGoodsDespatchedNotesV2, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ExportGoodsDespatchedNotesV2>
+        <LastResult>Success</LastResult>
+        <Name>Export Despatch Notes</Name>
+        <Enabled>false</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-03-26T11:50:04.7328906+00:00</LastRan>
+        <Id>a6b26c3e-c48b-4d61-b225-dec09b29623c</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>4077847f-7489-48a1-a7b9-b5eb0e29149a</Id>
+        </ConnectionPointer>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_export_goods_despatch_notes.xml</string>
+          </Value>
+        </OutputFile>
+        <SdkQuerySettings>
+          <Columns />
+          <Joins />
+          <Where />
+        </SdkQuerySettings>
+        <ExportSettings>
+          <OpLock>139810214</OpLock>
+          <DateTimeCreated>2025-03-26T11:46:20.31</DateTimeCreated>
+          <ExportType>Modified</ExportType>
+          <PageSize>100</PageSize>
+          <Timeout>30</Timeout>
+        </ExportSettings>
+        <CleanseCharacters />
+        <UseCaching>true</UseCaching>
+        <QuerySettings>
+          <Columns />
+          <Joins />
+          <Where />
+        </QuerySettings>
+      </ExportGoodsDespatchedNotesV2>
+    </Task>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Success</LastResult>
+        <Name>ABODEDES</Name>
+        <Enabled>false</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-03-28T14:02:12.0860849+00:00</LastRan>
+        <Id>6cf8507c-d762-4b79-a35c-924fad4e5178</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <Tasks>
+          <Task type="Zynk.Connect.Sage200V13.ExportGoodsDespatchedNotesV2, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+            <ExportGoodsDespatchedNotesV2>
+              <LastResult>Success</LastResult>
+              <Name>Export Despatch Notes - Jan 01 Onwards</Name>
+              <Enabled>false</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <CanResume>true</CanResume>
+              <Resume>false</Resume>
+              <LastRan>2025-03-28T14:02:12.0651242+00:00</LastRan>
+              <Id>2cb89255-a60b-42df-b10f-0b4876579543</Id>
+              <DebugLoggingEnabled>false</DebugLoggingEnabled>
+              <ConnectionPointer>
+                <Id>4077847f-7489-48a1-a7b9-b5eb0e29149a</Id>
+              </ConnectionPointer>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>sage_200_export_all_abodedes_goods_despatch_notes.xml</string>
+                </Value>
+              </OutputFile>
+              <SdkQuerySettings>
+                <Columns />
+                <Joins>
+                  <Sage200SdkJoin>
+                    <JoinType>InnerJoin</JoinType>
+                    <FromTable>SOPDespatchReceipt</FromTable>
+                    <FromColumn>SOPOrderId</FromColumn>
+                    <Comparison>Equals</Comparison>
+                    <ToTable>SOPOrderReturn</ToTable>
+                    <ToColumn>SOPOrderReturnID</ToColumn>
+                    <DetectModifications>true</DetectModifications>
+                  </Sage200SdkJoin>
+                  <Sage200SdkJoin>
+                    <JoinType>InnerJoin</JoinType>
+                    <FromTable>SOPOrderReturn</FromTable>
+                    <FromColumn>CustomerID</FromColumn>
+                    <Comparison>Equals</Comparison>
+                    <ToTable>SLCustomerAccount</ToTable>
+                    <ToColumn>SLCustomerAccountID</ToColumn>
+                    <DetectModifications>true</DetectModifications>
+                  </Sage200SdkJoin>
+                </Joins>
+                <Where>
+                  <Where>
+                    <Comparison>Equals</Comparison>
+                    <Value>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <UseEncryption>False</UseEncryption>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>'ABODEDES'</string>
+                      </Value>
+                    </Value>
+                    <LiteralValue>true</LiteralValue>
+                    <FieldName>[SLCustomerAccount].[CustomerAccountNumber]</FieldName>
+                    <SubClauses />
+                    <LogicOperator>And</LogicOperator>
+                  </Where>
+                  <Where>
+                    <Comparison>GreaterOrEquals</Comparison>
+                    <Value>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <UseEncryption>False</UseEncryption>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>'2025-01-01'</string>
+                      </Value>
+                    </Value>
+                    <LiteralValue>true</LiteralValue>
+                    <FieldName>[SOPDespatchReceipt].[DespatchReceiptDate]</FieldName>
+                    <SubClauses />
+                    <LogicOperator>And</LogicOperator>
+                  </Where>
+                </Where>
+              </SdkQuerySettings>
+              <ExportSettings>
+                <OpLock>139919512</OpLock>
+                <DateTimeCreated>2025-03-27T14:00:19.547</DateTimeCreated>
+                <ExportType>All</ExportType>
+                <PageSize>100</PageSize>
+                <Timeout>30</Timeout>
+              </ExportSettings>
+              <CleanseCharacters />
+              <UseCaching>true</UseCaching>
+              <QuerySettings>
+                <Columns />
+                <Joins />
+                <Where />
+              </QuerySettings>
+            </ExportGoodsDespatchedNotesV2>
+          </Task>
+          <Task type="Zynk.Connect.Sage200V13.ExportGoodsDespatchedNotesV2, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+            <ExportGoodsDespatchedNotesV2>
+              <LastResult>Success</LastResult>
+              <Name>Export Despatch Notes - New GDNs Only</Name>
+              <Enabled>false</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <CanResume>true</CanResume>
+              <Resume>false</Resume>
+              <LastRan>2025-03-27T16:01:35.3005568+00:00</LastRan>
+              <Id>654c1d30-1f60-468a-a6fe-8ebd83fbb3d6</Id>
+              <DebugLoggingEnabled>false</DebugLoggingEnabled>
+              <ConnectionPointer>
+                <Id>4077847f-7489-48a1-a7b9-b5eb0e29149a</Id>
+              </ConnectionPointer>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>sage_200_export_modified_abodedes_goods_despatch_notes.xml</string>
+                </Value>
+              </OutputFile>
+              <SdkQuerySettings>
+                <Columns />
+                <Joins>
+                  <Sage200SdkJoin>
+                    <JoinType>InnerJoin</JoinType>
+                    <FromTable>SOPDespatchReceipt</FromTable>
+                    <FromColumn>SOPOrderId</FromColumn>
+                    <Comparison>Equals</Comparison>
+                    <ToTable>SOPOrderReturn</ToTable>
+                    <ToColumn>SOPOrderReturnID</ToColumn>
+                    <DetectModifications>true</DetectModifications>
+                  </Sage200SdkJoin>
+                  <Sage200SdkJoin>
+                    <JoinType>InnerJoin</JoinType>
+                    <FromTable>SOPOrderReturn</FromTable>
+                    <FromColumn>CustomerID</FromColumn>
+                    <Comparison>Equals</Comparison>
+                    <ToTable>SLCustomerAccount</ToTable>
+                    <ToColumn>SLCustomerAccountID</ToColumn>
+                    <DetectModifications>true</DetectModifications>
+                  </Sage200SdkJoin>
+                </Joins>
+                <Where>
+                  <Where>
+                    <Comparison>Equals</Comparison>
+                    <Value>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <UseEncryption>False</UseEncryption>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>'ABODEDES'</string>
+                      </Value>
+                    </Value>
+                    <LiteralValue>true</LiteralValue>
+                    <FieldName>[SLCustomerAccount].[CustomerAccountNumber]</FieldName>
+                    <SubClauses />
+                    <LogicOperator>And</LogicOperator>
+                  </Where>
+                </Where>
+              </SdkQuerySettings>
+              <ExportSettings>
+                <OpLock>139890338</OpLock>
+                <DateTimeCreated>2025-03-27T14:00:19.547</DateTimeCreated>
+                <ExportType>Modified</ExportType>
+                <PageSize>100</PageSize>
+                <Timeout>30</Timeout>
+              </ExportSettings>
+              <CleanseCharacters />
+              <UseCaching>true</UseCaching>
+              <QuerySettings>
+                <Columns />
+                <Joins />
+                <Where />
+              </QuerySettings>
+            </ExportGoodsDespatchedNotesV2>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Unknown</LastResult>
+        <Name>PRONTEAU</Name>
+        <Enabled>false</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>526bbf60-f45f-4c91-8076-0406a9e20658</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <Tasks>
+          <Task type="Zynk.Connect.Sage200V13.ExportGoodsDespatchedNotesV2, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+            <ExportGoodsDespatchedNotesV2>
+              <LastResult>Success</LastResult>
+              <Name>Export Despatch Notes - Jan 01 Onwards</Name>
+              <Enabled>false</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <CanResume>true</CanResume>
+              <Resume>false</Resume>
+              <LastRan>2025-03-27T14:49:05.2665941+00:00</LastRan>
+              <Id>cb6add7e-7b0d-4ea0-b362-3c4b7eeb5af0</Id>
+              <DebugLoggingEnabled>false</DebugLoggingEnabled>
+              <ConnectionPointer>
+                <Id>4077847f-7489-48a1-a7b9-b5eb0e29149a</Id>
+              </ConnectionPointer>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>sage_200_export_all_pronteau_goods_despatch_notes.xml</string>
+                </Value>
+              </OutputFile>
+              <SdkQuerySettings>
+                <Columns />
+                <Joins>
+                  <Sage200SdkJoin>
+                    <JoinType>InnerJoin</JoinType>
+                    <FromTable>SOPDespatchReceipt</FromTable>
+                    <FromColumn>SOPOrderId</FromColumn>
+                    <Comparison>Equals</Comparison>
+                    <ToTable>SOPOrderReturn</ToTable>
+                    <ToColumn>SOPOrderReturnID</ToColumn>
+                    <DetectModifications>true</DetectModifications>
+                  </Sage200SdkJoin>
+                  <Sage200SdkJoin>
+                    <JoinType>InnerJoin</JoinType>
+                    <FromTable>SOPOrderReturn</FromTable>
+                    <FromColumn>CustomerID</FromColumn>
+                    <Comparison>Equals</Comparison>
+                    <ToTable>SLCustomerAccount</ToTable>
+                    <ToColumn>SLCustomerAccountID</ToColumn>
+                    <DetectModifications>true</DetectModifications>
+                  </Sage200SdkJoin>
+                </Joins>
+                <Where>
+                  <Where>
+                    <Comparison>Equals</Comparison>
+                    <Value>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <UseEncryption>False</UseEncryption>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>'PRONTEAU'</string>
+                      </Value>
+                    </Value>
+                    <LiteralValue>true</LiteralValue>
+                    <FieldName>[SLCustomerAccount].[CustomerAccountNumber]</FieldName>
+                    <SubClauses />
+                    <LogicOperator>And</LogicOperator>
+                  </Where>
+                  <Where>
+                    <Comparison>GreaterOrEquals</Comparison>
+                    <Value>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <UseEncryption>False</UseEncryption>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>'2025-01-01'</string>
+                      </Value>
+                    </Value>
+                    <LiteralValue>true</LiteralValue>
+                    <FieldName>[SOPDespatchReceipt].[DespatchReceiptDate]</FieldName>
+                    <SubClauses />
+                    <LogicOperator>And</LogicOperator>
+                  </Where>
+                </Where>
+              </SdkQuerySettings>
+              <ExportSettings>
+                <OpLock>139890338</OpLock>
+                <DateTimeCreated>2025-03-27T14:00:19.547</DateTimeCreated>
+                <ExportType>All</ExportType>
+                <PageSize>100</PageSize>
+                <Timeout>30</Timeout>
+              </ExportSettings>
+              <CleanseCharacters />
+              <UseCaching>true</UseCaching>
+              <QuerySettings>
+                <Columns />
+                <Joins />
+                <Where />
+              </QuerySettings>
+            </ExportGoodsDespatchedNotesV2>
+          </Task>
+          <Task type="Zynk.Connect.Sage200V13.ExportGoodsDespatchedNotesV2, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+            <ExportGoodsDespatchedNotesV2>
+              <LastResult>Success</LastResult>
+              <Name>Export Despatch Notes - New GDNs Only</Name>
+              <Enabled>false</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <CanResume>true</CanResume>
+              <Resume>false</Resume>
+              <LastRan>2025-03-27T14:49:41.7750538+00:00</LastRan>
+              <Id>336bfa5c-713f-41d4-b477-00206a7b787b</Id>
+              <DebugLoggingEnabled>false</DebugLoggingEnabled>
+              <ConnectionPointer>
+                <Id>4077847f-7489-48a1-a7b9-b5eb0e29149a</Id>
+              </ConnectionPointer>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>sage_200_export_modified_pronteau_goods_despatch_notes.xml</string>
+                </Value>
+              </OutputFile>
+              <SdkQuerySettings>
+                <Columns />
+                <Joins>
+                  <Sage200SdkJoin>
+                    <JoinType>InnerJoin</JoinType>
+                    <FromTable>SOPDespatchReceipt</FromTable>
+                    <FromColumn>SOPOrderId</FromColumn>
+                    <Comparison>Equals</Comparison>
+                    <ToTable>SOPOrderReturn</ToTable>
+                    <ToColumn>SOPOrderReturnID</ToColumn>
+                    <DetectModifications>true</DetectModifications>
+                  </Sage200SdkJoin>
+                  <Sage200SdkJoin>
+                    <JoinType>InnerJoin</JoinType>
+                    <FromTable>SOPOrderReturn</FromTable>
+                    <FromColumn>CustomerID</FromColumn>
+                    <Comparison>Equals</Comparison>
+                    <ToTable>SLCustomerAccount</ToTable>
+                    <ToColumn>SLCustomerAccountID</ToColumn>
+                    <DetectModifications>true</DetectModifications>
+                  </Sage200SdkJoin>
+                </Joins>
+                <Where>
+                  <Where>
+                    <Comparison>Equals</Comparison>
+                    <Value>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <UseEncryption>False</UseEncryption>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>'PRONTEAU'</string>
+                      </Value>
+                    </Value>
+                    <LiteralValue>true</LiteralValue>
+                    <FieldName>[SLCustomerAccount].[CustomerAccountNumber]</FieldName>
+                    <SubClauses />
+                    <LogicOperator>And</LogicOperator>
+                  </Where>
+                </Where>
+              </SdkQuerySettings>
+              <ExportSettings>
+                <OpLock>139890338</OpLock>
+                <DateTimeCreated>2025-03-27T14:00:19.547</DateTimeCreated>
+                <ExportType>Modified</ExportType>
+                <PageSize>100</PageSize>
+                <Timeout>30</Timeout>
+              </ExportSettings>
+              <CleanseCharacters />
+              <UseCaching>true</UseCaching>
+              <QuerySettings>
+                <Columns />
+                <Joins />
+                <Where />
+              </QuerySettings>
+            </ExportGoodsDespatchedNotesV2>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Internet.WinSCP.Tasks.WinSCPUploadFile, Zynk.Internet.WinSCP, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <WinSCPUploadFile>
+        <LastResult>Success</LastResult>
+        <Name>Upload Despatch Notes</Name>
+        <Enabled>false</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2025-04-03T10:25:17.7461004+01:00</LastRan>
+        <Id>75a40988-7f6b-4e0a-b9b6-4676db28e252</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>225c6aeb-de9c-4bce-a284-bd91c7387271</Id>
+        </ConnectionPointer>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_export_goods_despatch_notes.xml</string>
+          </Value>
+        </InputFile>
+        <Directory>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>/Sage</string>
+          </Value>
+        </Directory>
+        <OutputFile>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>abode-despatch-notes.xml</string>
+          </Value>
+        </OutputFile>
+        <OverwriteFile>true</OverwriteFile>
+        <Permissions>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Permissions>
+        <PrependTimestamp>false</PrependTimestamp>
+        <PreserveTimestamp>true</PreserveTimestamp>
+        <Retries>2</Retries>
+        <TemporaryUploadSetting>
+          <Option>NotEnabled</Option>
+          <TemporaryFileExtension>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string>tmp</string>
+            </Value>
+          </TemporaryFileExtension>
+          <TemporaryDirectory>
+            <Type>StaticValue</Type>
+            <UseRazorEngine>False</UseRazorEngine>
+            <ReadContentsOfFile>False</ReadContentsOfFile>
+            <UseEncryption>False</UseEncryption>
+            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+              <string>Temp</string>
+            </Value>
+          </TemporaryDirectory>
+        </TemporaryUploadSetting>
+        <TimestampFormat>yyyyMMddHHmmssffff</TimestampFormat>
+      </WinSCPUploadFile>
+    </Task>
+    <Task type="Zynk.Ecommerce.MagentoV2.Tasks.UpdateOrderStatuses, Zynk.Ecommerce.MagentoV2, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <UpdateOrderStatuses>
+        <LastResult>Unknown</LastResult>
+        <Name>Update Order Statuses</Name>
+        <Enabled>false</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>75a171e5-e46f-4605-927b-b56da3d17896</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>806aa74b-f6e1-4458-b28f-5a066cbed52c</Id>
+        </ConnectionPointer>
+        <StoreCode>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>all</string>
+          </Value>
+        </StoreCode>
+        <InputFile>
+          <Type>PreviousValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>magento_update_order_statuses_success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>magento_update_order_statuses_fail.xml</string>
+          </Value>
+        </FailFile>
+        <PreventReprocessing>true</PreventReprocessing>
+      </UpdateOrderStatuses>
+    </Task>
+    <Task type="Zynk.Connect.Sage200V13.ExportSalesOrdersV2, Zynk.Connect.Sage200V13, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <ExportSalesOrdersV2>
+        <LastResult>Success</LastResult>
+        <Name>Export Sales Orders</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-01-08T13:58:43.7972182+00:00</LastRan>
+        <Id>26a2eaaf-c6ff-449d-bb0a-01c08f967cf4</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
+        <ConnectionPointer>
+          <Id>97db0afb-e5c6-4c00-94ba-df4242f33978</Id>
+        </ConnectionPointer>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_export_sales_orders.xml</string>
+          </Value>
+        </OutputFile>
+        <SdkQuerySettings>
+          <Columns />
+          <Joins />
+          <Where>
+            <Where>
+              <Comparison>Like</Comparison>
+              <Value>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>'%ABODEDES-A%'</string>
+                </Value>
+              </Value>
+              <LiteralValue>true</LiteralValue>
+              <FieldName>[SOPOrderReturn].[CustomerDocumentNo]</FieldName>
+              <SubClauses />
+              <LogicOperator>And</LogicOperator>
+            </Where>
+            <Where>
+              <Comparison>GreaterOrEquals</Comparison>
+              <Value>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <UseEncryption>False</UseEncryption>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>'2025-12-01'</string>
+                </Value>
+              </Value>
+              <LiteralValue>true</LiteralValue>
+              <FieldName>[SOPOrderReturn].[DocumentDate]</FieldName>
+              <SubClauses />
+              <LogicOperator>And</LogicOperator>
+            </Where>
+          </Where>
+        </SdkQuerySettings>
+        <ExportSettings>
+          <OpLock>148466375</OpLock>
+          <DateTimeCreated>2026-01-08T13:58:40.607</DateTimeCreated>
+          <ExportType>Modified</ExportType>
+          <PageSize>100</PageSize>
+          <Timeout>30</Timeout>
+        </ExportSettings>
+        <CleanseCharacters />
+        <UseCaching>true</UseCaching>
+        <IncludeBatchSerialItemInformation>false</IncludeBatchSerialItemInformation>
+      </ExportSalesOrdersV2>
+    </Task>
+    <Task type="Zynk.Internet.Http.HttpTask, Zynk.Internet.Http, Version=2024.10.2.0, Culture=neutral, PublicKeyToken=null">
+      <HttpTask>
+        <LastResult>Success</LastResult>
+        <Name>HTTP Task</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
+        <Resume>false</Resume>
+        <LastRan>2026-01-08T13:58:44.2437261+00:00</LastRan>
+        <Id>9440d7dd-e2e7-4365-bdfd-c1e8bef884a7</Id>
+        <DebugLoggingEnabled>true</DebugLoggingEnabled>
+        <Url>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>https://mcstaging.abodedesigns.co.uk/sagesync/index/save</string>
+          </Value>
+        </Url>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <Timeout>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>120000</string>
+          </Value>
+        </Timeout>
+        <UserAgent>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Zynk Software Ltd/Zynk</string>
+          </Value>
+        </UserAgent>
+        <EncodingType>UTF8</EncodingType>
+        <ProtocolVersion>v1_1</ProtocolVersion>
+        <KeepAlive xsi:nil="true" />
+        <HeaderValues />
+        <FormValues />
+        <ContentsField>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ContentsField>
+        <Input>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sage_200_export_sales_orders.xml</string>
+          </Value>
+        </Input>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <UseEncryption>False</UseEncryption>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </OutputFile>
+        <Method>POST</Method>
+        <Retries>1</Retries>
+        <CompressData>false</CompressData>
+      </HttpTask>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>254c6fe0-ca4f-45c7-88cb-11d225e29e3f</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>abode-adobecommerce - staging</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>true</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>2024.10.2</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+  <WorkingDirectory>C:\ProgramData\Zynk Software\Zynk\2.0\Data\abode-adobecommerce - staging</WorkingDirectory>
+  <FilePath>C:\ProgramData\Zynk Software\Zynk\2.0\My Workflows\abode-adobecommerce - staging.wkf</FilePath>
+</Workflow>
